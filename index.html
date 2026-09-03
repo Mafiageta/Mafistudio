@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,9 +12,8 @@
 body {
     margin: 0;
     font-family: Inter, sans-serif;
-    background: #0b0f1a;
+    background: #070a12;
     color: white;
-    scroll-behavior: smooth;
 }
 
 /* NAV */
@@ -21,29 +21,19 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 12, 20, 0.7);
-    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
-    z-index: 1000;
-}
-
-nav h1 {
-    font-size: 18px;
-    letter-spacing: 2px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
 }
 
 nav a {
     color: #aaa;
     margin-left: 20px;
     text-decoration: none;
-    font-size: 14px;
 }
-
-nav a:hover {
-    color: white;
-}
+nav a:hover { color: white; }
 
 /* HERO */
 .hero {
@@ -53,45 +43,30 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: radial-gradient(circle at top, #1a2a6c, #0b0f1a 60%);
+    background: radial-gradient(circle at top, #1b2a4a, #070a12 60%);
 }
 
-.hero h2 {
+.logo {
     font-size: 60px;
-    margin: 0;
+    font-weight: 800;
+    letter-spacing: 3px;
 }
 
-.hero p {
+.subtitle {
+    max-width: 600px;
     color: #aaa;
-    max-width: 500px;
-}
-
-/* BUTTON */
-.btn {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: 1px solid #3b82f6;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #3b82f6;
+    margin-top: 10px;
 }
 
 /* SECTIONS */
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
-h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    border-left: 4px solid #3b82f6;
+h2 {
+    border-left: 4px solid #4f8cff;
     padding-left: 10px;
 }
 
@@ -107,19 +82,15 @@ h3 {
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #1f2937;
-    transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    border-color: #3b82f6;
+    border-color: #4f8cff;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #555;
+/* LINKS */
+a {
+    color: #4f8cff;
 }
 </style>
 </head>
@@ -127,88 +98,75 @@ footer {
 <body>
 
 <nav>
-    <h1>MAFISTUDIO</h1>
+    <div><b>MAFISTUDIO</b></div>
     <div>
         <a href="#about">Sobre</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#achievements">Logros</a>
+        <a href="#games">Juegos</a>
         <a href="#contact">Contacto</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-    <h2>Mafistudio</h2>
-    <p>Indie game studio & creative projects by Emanuel. Juegos, horror, RPG y mundos experimentales.</p>
-    <a class="btn" href="#projects">Ver proyectos</a>
+    <div class="logo">MAFISTUDIO</div>
+    <div class="subtitle">
+        Estudio indie cubano-canadiense de videojuegos creado por Mafi (Mafiageta Gamer).  
+        Enfocado en experiencias RPG, horror y mundos experimentales en Unreal Engine.
+    </div>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-    <h3>Sobre el estudio</h3>
+    <h2>Sobre el estudio</h2>
     <p>
-        Mafistudio es un estudio independiente creado por un desarrollador que trabaja en juegos
-        tipo RPG, horror, pixelart y experiencias multijugador.  
-        Inspirado en títulos como Terraria, Dark Souls y juegos experimentales indie.
+        Mafistudio empezó como un nombre para ideas de juegos sin límites.  
+        Hoy es un estudio indie enfocado en crear experiencias únicas, obsesionado con el gameplay y la calidad.
+        <br><br>
+        Fundado en diciembre de 2024 por Mafi (Mafiageta Gamer), creador de contenido en YouTube, Twitch y otras plataformas.
     </p>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-    <h3>Proyectos</h3>
+<!-- GAMES -->
+<section id="games">
+    <h2>Juegos</h2>
 
     <div class="grid">
 
         <div class="card">
-            <h4>Vaeryn Project</h4>
-            <p>RPG survival en Unreal Engine 5.6 con multijugador hasta 4 jugadores.</p>
+            <h3>RoomRush</h3>
+            <p>
+                Juego estilo Backrooms con estética de terror y criaturas.  
+                Primera creación del estudio.
+            </p>
         </div>
 
         <div class="card">
-            <h4>Horror VHS Game</h4>
-            <p>Experiencia corta tipo Backrooms con estética VHS y atmósfera psicológica.</p>
+            <h3>Vaeryn Project</h3>
+            <p>
+                RPG survival en Unreal Engine 5.6.  
+                Fantasía, pixelart, multijugador, exploración y combate.
+            </p>
         </div>
 
-        <div class="card">
-            <h4>Próximos proyectos</h4>
-            <p>Más juegos indie, experimentales y contenido creativo del estudio.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-    <h3>Logros</h3>
-
-    <div class="grid">
-        <div class="card">
-            <h4>Comunidad</h4>
-            <p>+ seguidores en redes y crecimiento constante del estudio.</p>
-        </div>
-
-        <div class="card">
-            <h4>Desarrollo</h4>
-            <p>Proyectos en Unreal Engine 5.6 con sistemas multijugador y PCG.</p>
-        </div>
-
-        <div class="card">
-            <h4>Creación</h4>
-            <p>Experiencia en juegos 3D, pixelart y diseño de gameplay systems.</p>
-        </div>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h3>Contacto</h3>
-    <p>Puedes contactarme o seguir el estudio en mis redes:</p>
+    <h2>Contacto & Redes</h2>
+
+    <p><b>Email comercial:</b> mafiagetagamer@gmail.com</p>
+
     <p>
-        Discord • YouTube • Twitch • GitHub
+        TikTok • YouTube • Twitch • Kick • Instagram • Discord • Facebook
+    </p>
+
+    <p style="color:#aaa">
+        (Enlaces completos pueden añadirse luego cuando los optimices)
     </p>
 </section>
 
-<footer>
+<footer style="text-align:center; padding:40px; color:#555;">
     © 2026 Mafistudio — Indie Game Studio
 </footer>
 
