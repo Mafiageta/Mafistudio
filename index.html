@@ -1,174 +1,205 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mafistudio</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: Inter, sans-serif;
-    background: #070a12;
-    color: white;
+  background: black;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
 }
 
-/* NAV */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
+/* FONDO ANIMADO */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #111 0%, black 70%);
+  animation: pulse 6s infinite;
+  z-index: -1;
 }
 
-nav a {
-    color: #aaa;
-    margin-left: 20px;
-    text-decoration: none;
-}
-nav a:hover { color: white; }
-
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: radial-gradient(circle at top, #1b2a4a, #070a12 60%);
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
 }
 
+/* LOGO */
 .logo {
-    font-size: 60px;
-    font-weight: 800;
-    letter-spacing: 3px;
+  text-align: center;
+  margin-top: 60px;
+  animation: fadeIn 2s ease;
 }
 
-.subtitle {
-    max-width: 600px;
-    color: #aaa;
-    margin-top: 10px;
+.logo img {
+  width: 140px;
+  filter: drop-shadow(0 0 10px gold);
 }
 
-/* SECTIONS */
-section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: auto;
+.logo h1 {
+  margin-top: 10px;
+  letter-spacing: 4px;
 }
 
-h2 {
-    border-left: 4px solid #4f8cff;
-    padding-left: 10px;
+.logo p {
+  color: #aaa;
+  margin-top: 5px;
 }
 
-/* CARDS */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* JUEGOS */
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
+  flex-wrap: wrap;
 }
 
-.card {
-    background: #111827;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #1f2937;
+.game {
+  width: 260px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.card:hover {
-    border-color: #4f8cff;
+.game img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
-/* LINKS */
-a {
-    color: #4f8cff;
+.game:hover {
+  transform: scale(1.05);
+}
+
+.game:hover img {
+  filter: brightness(1.2);
+}
+
+.game h3 {
+  margin-top: 10px;
+}
+
+.game p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+/* BOTÓN */
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: 1px solid gold;
+  color: gold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: gold;
+  color: black;
+}
+
+/* REDES */
+.socials {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.socials h2 {
+  margin-bottom: 20px;
+}
+
+.socials a {
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: gold;
+  border-bottom: 1px solid gold;
+}
+
+/* CONTACTO */
+.contact {
+  text-align: center;
+  margin: 40px;
+  color: gray;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 </style>
+
 </head>
 
 <body>
 
-<nav>
-    <div><b>MAFISTUDIO</b></div>
-    <div>
-        <a href="#about">Sobre</a>
-        <a href="#games">Juegos</a>
-        <a href="#contact">Contacto</a>
-    </div>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-    <div class="logo">MAFISTUDIO</div>
-    <div class="subtitle">
-        Estudio indie cubano-canadiense de videojuegos creado por Mafi (Mafiageta Gamer).  
-        Enfocado en experiencias RPG, horror y mundos experimentales en Unreal Engine.
-    </div>
+<!-- LOGO -->
+<div class="logo">
+  <img src="BackgroundEraser_20260903_210443779.png">
+  <h1>MAFISTUDIO</h1>
+  <p>Estudio indie cubano-canadiense | Unreal Engine</p>
 </div>
 
-<!-- ABOUT -->
-<section id="about">
-    <h2>Sobre el estudio</h2>
-    <p>
-        Mafistudio empezó como un nombre para ideas de juegos sin límites.  
-        Hoy es un estudio indie enfocado en crear experiencias únicas, obsesionado con el gameplay y la calidad.
-        <br><br>
-        Fundado en diciembre de 2024 por Mafi (Mafiageta Gamer), creador de contenido en YouTube, Twitch y otras plataformas.
-    </p>
-</section>
+<!-- JUEGOS -->
+<div class="games">
 
-<!-- GAMES -->
-<section id="games">
-    <h2>Juegos</h2>
+  <!-- ROOMRUSH -->
+  <div class="game">
+    <img src="roomrush.jpg">
+    <h3>RoomRush</h3>
+    <p>Horror estilo Backrooms con estética VHS y criaturas.</p>
+    <a class="button" href="#">Ver más</a>
+  </div>
 
-    <div class="grid">
+  <!-- VAERYN -->
+  <div class="game">
+    <img src="vaeryn.jpg">
+    <h3>Vaeryn</h3>
+    <p>RPG fantasía, survival, 1ra y 3ra persona.</p>
+    <a class="button" href="https://mafiageta.itch.io/vaeryn" target="_blank">Jugar / Ver</a>
+  </div>
 
-        <div class="card">
-            <h3>RoomRush</h3>
-            <p>
-                Juego estilo Backrooms con estética de terror y criaturas.  
-                Primera creación del estudio.
-            </p>
-        </div>
+</div>
 
-        <div class="card">
-            <h3>Vaeryn Project</h3>
-            <p>
-                RPG survival en Unreal Engine 5.6.  
-                Fantasía, pixelart, multijugador, exploración y combate.
-            </p>
-        </div>
+<!-- REDES -->
+<div class="socials">
+  <h2>Redes</h2>
 
-    </div>
-</section>
+  <a href="https://tiktok.com/@mafiageta.gamer" target="_blank">TikTok</a>
+  <a href="https://discord.gg/bQcBrzudbF" target="_blank">Discord</a>
+  <a href="https://facebook.com/Mafiageta-Gamer-03-Oficial-102993022062430" target="_blank">Facebook</a>
+  <a href="https://kick.com/mafiageta-gamer" target="_blank">Kick</a>
+  <a href="https://twitch.tv/Mafiageta" target="_blank">Twitch</a>
+  <a href="https://instagram.com/mafiageta_gamer" target="_blank">Instagram</a>
+  <a href="https://www.reddit.com/user/Old-Examination-8498/" target="_blank">Reddit</a>
 
-<!-- CONTACT -->
-<section id="contact">
-    <h2>Contacto & Redes</h2>
+</div>
 
-    <p><b>Email comercial:</b> mafiagetagamer@gmail.com</p>
-
-    <p>
-        TikTok • YouTube • Twitch • Kick • Instagram • Discord • Facebook
-    </p>
-
-    <p style="color:#aaa">
-        (Enlaces completos pueden añadirse luego cuando los optimices)
-    </p>
-</section>
-
-<footer style="text-align:center; padding:40px; color:#555;">
-    © 2026 Mafistudio — Indie Game Studio
-</footer>
+<!-- CONTACTO -->
+<div class="contact">
+  <p>Contacto: mafiagetagamer@gmail.com</p>
+</div>
 
 </body>
 </html>
