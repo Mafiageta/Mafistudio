@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* BODY - FONDO DEGRADADO NUEVO */
+/* BODY - FONDO DEGRADADO */
 body {
   font-family: 'Segoe UI', sans-serif;
   color: white;
@@ -61,15 +61,14 @@ nav a:hover {
   color: gold;
 }
 
-/* LOGO - MÁS GRANDE */
+/* LOGO */
 .logo {
   text-align: center;
   margin-top: 80px;
-  animation: fadeIn 1.5s ease;
 }
 
 .logo img {
-  width: 450px; /* 🔥 AQUÍ LO HICE MÁS GRANDE */
+  width: 450px;
   max-width: 90%;
   filter: drop-shadow(0 0 20px gold);
 }
@@ -115,7 +114,6 @@ section {
 .game img {
   width: 100%;
   border-radius: 12px;
-  transition: 0.4s;
 }
 
 .game:hover {
@@ -149,24 +147,6 @@ section {
   color: gray;
 }
 
-/* ANIMACIÓN */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* MOBILE */
-@media (max-width: 500px) {
-  nav a {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-
-  .logo img {
-    width: 320px;
-  }
-}
-
 </style>
 </head>
 
@@ -190,7 +170,7 @@ section {
 <section id="about">
   <div class="about">
     <p>
-      Mafistudio es un estudio indie creado por Mafiageta Gamer, enfocado en crear experiencias únicas con gameplay pulido y estilo propio.
+      Mafistudio es un estudio indie creado por Mafiageta Gamer.
     </p>
   </div>
 </section>
@@ -223,8 +203,10 @@ section {
     <a href="https://discord.gg/bQcBrzudbF" target="_blank">Discord</a>
     <a href="https://kick.com/mafiageta-gamer" target="_blank">Kick</a>
     <a href="https://twitch.tv/Mafiageta" target="_blank">Twitch</a>
-    <a href="www.youtube.com/@Mafiageta" target="_blank">Youtube</a>
-    
+
+    <!-- 🔥 YOUTUBE AGREGADO -->
+    <a href="https://www.youtube.com/@Mafiageta" target="_blank">YouTube</a>
+
   </div>
 </section>
 
